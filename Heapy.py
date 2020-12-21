@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[5]:
+# In[ ]:
 
 
 import math
@@ -122,7 +122,7 @@ heap2 = Heap()
 
 heap1.heaplist = [2, 5, 3, 21, 0, 0, -1, 7, 8, 3]
 
-heap1.heapsize = len(heap1)
+heap1.heapsize = len(heap1.heaplist)
 for i in range(10):
     heap2.add(int(input('Следующий элемент для кучи (всего 10): ')))
     
@@ -152,4 +152,10 @@ arr = [10, 9, 5, 3, 1, -4, 5, 3]
 print('Наш массив: ', arr)
 heap_sort(arr)
 print('Отсортированный массив: ', arr)
+
+
+# In[ ]:
+
+
+
 
