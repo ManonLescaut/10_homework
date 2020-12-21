@@ -56,7 +56,7 @@ N = int(input('Введите количество точек: '))
 dots = []
 vector = Vector()
 for i in range(N):
-    a, b, c = tuple(map(int, input().split()))
+    a, b, c = tuple(map(int, input('Координаты n-ой точки: ').split()))
     dots.append(vector.set_vector(a, b, c))
     
 far_dot(dots, N)
@@ -78,8 +78,10 @@ N = int(input('Введите количество точек: '))
 dots = []
 vector = Vector()
 for i in range(N):
-    a, b, c = tuple(map(int, input().split()))
+    a, b, c = tuple(map(int, input('Координаты n-ой точки: ').split()))
     dots.append(vector.set_vector(a, b, c))
+    
+mass_centre(dots, N)
 
 
 # In[ ]:
@@ -141,11 +143,20 @@ def max_perimeter(dots, N):
     return max_p
     
 N = int(input('Введите количество точек: '))
+
 vertices = []
 vertex = Graph_Edge()
 for i in range(N):
-    a, b, c = tuple(map(int, input('Координаты точки: ').split()))
+    a, b, c = tuple(map(int, input('Координаты n-ой точки: ').split()))
     vertices.append(vertex.set_vector(a, b, c))
-    
-max_perimeter(vertices, N)
+if N < 3:
+    print('Вы хотите, чтобы я сделал треугольник из двух точек. Я так не играю.') 
+elif N >= 3:
+    max_perimeter(vertices, N)
+
+
+# In[ ]:
+
+
+
 
